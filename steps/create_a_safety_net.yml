@@ -3,7 +3,7 @@ learningObjectives:
 - Implementing a 404 page to catch any broken links or missing pages.
 hints:
 - Create a new component that let users know that the page they are trying to visit does not exist.
-- Use react-router-dom to handle 404 page.
+- Use react-router-dom to handle the 404 page.
 startFlow:
   do:
   - actionId: bot_message
@@ -14,9 +14,9 @@ startFlow:
         delay: 1300
       - text: :instruction[In the 404 page you can add the text as "Page Not Found"]{block=true} 
         delay: 1000
-      - text: "You can also add some description, I think following description would be right match for our website: _Oops, Looks like you've stumbled upon a item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
+      - text: "You can also add some description, I think the following description would be a right match for our website: _Oops, Looks like you've stumbled upon an item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
         delay: 1400
-      - text: "Once you create this component, update the routing configuration so that 404 page will be shown for every non-existent route and create a PR once you are done."
+      - text: "Once you create this component, update the routing configuration so that the 404 page will be shown for every non-existent route, and create a PR once you are done."
         delay: 3500
 trigger: 
   type: github_pr_lifecycle_status
@@ -42,24 +42,24 @@ trigger:
             params:
               person: lucca
               messages:
-              - text: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
+              - text: "Great job! Your attention to detail has ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
                 delay: 2000
           - actionId: github_pr_approve
             params:
               person: lucca
-              message: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
+              message: "Great job! Your attention to detail has ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
         github_pr_workflow_complete_failure:
           do:
           - actionId: bot_message
             params:
               person: lucca
               messages:
-              - text: "Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
+              - text: "Oh no! It looks like there might be an issue with your implementation. Can you take a look and troubleshoot to get it working correctly?"
                 delay: 3000
           - actionId: github_pr_reject
             params:
               person: lucca
-              message: "Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
+              message: "Oh no! It looks like there might be an issue with your implementation. Can you take a look and troubleshoot to get it working correctly?"
         github_pr_merged:
           do:
           - actionId: finish_step

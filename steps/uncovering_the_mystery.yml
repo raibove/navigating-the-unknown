@@ -1,8 +1,8 @@
 id: uncovering_the_mystery
 learningObjectives: 
-- Identifying root cause of issue. This will involve debugging the code and conducting thorough research to pinpoint the exact location of the problem.
+- Identifying the root cause of the issue. This will involve debugging the code and conducting thorough research to pinpoint the exact location of the problem.
 hints:
-- Check if there is any error in console or the app is running properly. 
+- Check if there is any error in the console or if the app is running properly. 
 - Find if routing is properly configured for that page.
 startFlow:
   do:
@@ -14,11 +14,11 @@ startFlow:
         delay: 2000
       - text: "Well, we've been getting a lot of complaints from our customers that they're landing on a blank page when they try to access the **/product** route. We're not sure how they landed on that page. They may have followed a link from an external website or a search engine, but when they arrive at the page, there is no content displayed."
         delay: 3500
-      - text: "It iss really important that we figure out what's causing this issue so we can fix it as soon as possible."
+      - text: "It is really important that we figure out what's causing this issue so we can fix it as soon as possible."
         delay: 1500
-      - text: "Can you please take a look and see if you can find the root cause of the issue? Check the console, or any error messages in the code, or other possibilities."
+      - text: "Can you please take a look and see if you can find the root cause of the issue? Check the console, or if there are any error messages in the code or other possibilities."
         delay: 2500
-      - text: "Let me know what the issue is once you've identified it, so that we can work on a solution."
+      - text: "Let me know what the issue is once you've identified it so that we can work on a solution."
         delay: 2000
 trigger:
   type: user_message
@@ -49,5 +49,5 @@ trigger:
             messages:
             - text: It seems like you're still not quite sure what the issue is. We understand that debugging can be challenging, but don't worry, we're here to help.
               delay: 1000
-            - text:  Can you please take another look and let us know if you need any assistance.
+            - text:  Can you please take another look and let us know if you need any assistance?
               delay: 1000
