@@ -12,7 +12,7 @@ startFlow:
       messages:
       - text: "Now that we know it's a missing page, we need to create a 404 page to handle any broken links or missing pages in the future."
         delay: 1300
-      - text: :instruction[In the 404 page you can add the text as "Page Not Found"]{block=true} 
+      - text: :instruction[In the 404 page make sure you add the text as "Page Not Found"]{block=true} 
         delay: 1000
       - text: "You can also add some description, I think the following description would be a right match for our website: _Oops, Looks like you've stumbled upon an item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
         delay: 1400
