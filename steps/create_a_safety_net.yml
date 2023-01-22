@@ -18,49 +18,49 @@ startFlow:
         delay: 3500
 trigger: 
   type: github_pr_lifecycle_status
-    flowNode:
-      switch:
-        key: "${eventType}"
-        cases:
-          github_pr_opened:
-            do:
-            - actionId: bot_message
-              params:
-                person: lucca
-                messages:
-                - text: "On it, I'll review the changes right away."
-                  delay: 1000
-            - actionId: github_pr_comment
-              params:
-                person: lucca
-                message: "On it, I'll review the changes right away."
-          github_pr_workflow_complete_success:
-            do:
-            - actionId: bot_message
-              params:
-                person: lucca
-                messages:
-                - text: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
-                  delay: 2000
-            - actionId: github_pr_approve
-              params:
-                person: lucca
-                message: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
-          github_pr_workflow_complete_failure:
-            do:
-            - actionId: bot_message
-              params:
-                person: lucca
-                messages:
-                - text: ""Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
-                  delay: 3000
-            - actionId: github_pr_reject
-              params:
-                person: lucca
-                message: "Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
-          github_pr_merged:
-            do:
-            - actionId: finish_step
+  flowNode:
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "On it, I'll review the changes right away."
+                delay: 1000
+          - actionId: github_pr_comment
+            params:
+              person: lucca
+              message: "On it, I'll review the changes right away."
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
+                delay: 2000
+          - actionId: github_pr_approve
+            params:
+              person: lucca
+              message: "Great job! Your attention to detail have ensured that our customers will never be lost again. Keep up the good work. Go ahead and merge the PR."
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: ""Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
+                delay: 3000
+          - actionId: github_pr_reject
+            params:
+              person: lucca
+              message: "Oh no! It looks like there might be an issue with your implementation. Can you take a look troubleshoot to get it working correctly?"
+        github_pr_merged:
+          do:
+          - actionId: finish_step
 githubActions:
   backend:
   frontend:
