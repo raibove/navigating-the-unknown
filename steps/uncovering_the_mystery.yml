@@ -12,7 +12,7 @@ startFlow:
       messages:
       - text: "Hey there! My name is Lucca and I work with Vanessa and Navi at Anythink. I'm really excited to be working with you on this project."
         delay: 2000
-      - text: "Well, we've been getting a lot of complaints from our customers that they're landing on a blank page when they try to access the /product route. It's really important that we figure out what's causing this issue so we can fix it as soon as possible."
+      - text: "Well, we've been getting a lot of complaints from our customers that they're landing on a blank page when they try to access the **/product** route. It's really important that we figure out what's causing this issue so we can fix it as soon as possible."
         delay: 3500
       - text: "Can you please take a look and see if you can find the root cause of the issue? Check the console, or any error messages in the code, or other possibilities."
         delay: 2500
