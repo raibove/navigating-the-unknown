@@ -60,3 +60,11 @@ trigger: github_pr_lifecycle_status
         github_pr_merged:
           do:
           - actionId: finish_step
+githubActions:
+  backend:
+  frontend:
+    capabilities:
+      - enzyme
+    testfile: "route.test.js"
+
+
