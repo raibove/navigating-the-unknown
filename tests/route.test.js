@@ -14,6 +14,6 @@ describe('404 Page', () => {
       </MemoryRouter>
       </Provider>
     );
-    expect(getByText('Page Not Found')).toBeInTheDocument();
+    expect(getByText(/Page Not Found/i)).toBeInTheDocument();
   });
 });
