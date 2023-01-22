@@ -65,5 +65,5 @@ githubActions:
   backend:
   frontend:
     capabilities:
-    - enzyme
+    - \@testing-library/react@12.1.5
     testFile: "route.test.js"
