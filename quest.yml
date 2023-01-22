@@ -4,14 +4,11 @@ description: "What’s worse than a bug? A bug that happens in the production en
 summary: "Welcome to real life - where a commit on one side of the world affects users on the other side. Most of the problems you’ll encounter won’t be as straightforward, and we’ll first need to dive into the data to analyze what exactly the problem is.\n\nFinding needles in haystacks is a crucial part of every engineer's work. No two bugs are the same, but the process by which they’re eliminated often begins with cutting and slicing data until we isolate the exact problem. Then we need to reproduce it locally as it’s the only way to know that we are fixing the problem. Finally, it’s time to fix the problem and deploy it to production. \n\nThe reproduction, by the way, can be a challenge in itself, as developing on a desktop with a stable and fast internet connection will give you the experience of a certain subset of your users. Others might use the product on a different type of device or with very limited bandwidth— circumstances that can expose bugs. Luckily, we have enough tools that let us mimic different users."
 level: beginner
 steps:
-- funneldrop_analyze_data
-- funneldrop_reproduce_locally
-- funneldrop_fixing_bug_pr
-duration: 1.5
+- uncovering_the_mystery
+- create_a_safety_net
+duration: 0.5
 skills:
 - frontend
 - debugging
-- observability
-- communication
 questDependency: docker_localsetup
-slogan: It's time for...
+slogan: Lost no more
