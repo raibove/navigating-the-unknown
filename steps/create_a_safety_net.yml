@@ -12,9 +12,11 @@ startFlow:
       messages:
       - text: "Now that we know it's a missing page, we need to create a 404 page to handle any broken links or missing pages in the future."
         delay: 1300
-      - text: "In the 404 page you can add the text as _Oops, Looks like you've stumbled upon a item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
+      - text: :instruction[In the 404 page you can add the text as "Page Not Found"]{block=true} 
+        delay: 1000
+      - text: "You can also add some description, I think following description would be right match for our website: _Oops, Looks like you've stumbled upon a item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
         delay: 1400
-      - text: "Once you create this component, add it to the routing and create a PR."
+      - text: "Once you create this component, update the routing configuration so that 404 page will be shown for every non-existent route and create a PR once you are done."
         delay: 3500
 trigger: 
   type: github_pr_lifecycle_status
@@ -65,5 +67,5 @@ githubActions:
   backend:
   frontend:
     capabilities:
-    - \@testing-library/react@12.1.5
+    - enzyme
     testFile: "route.test.js"
