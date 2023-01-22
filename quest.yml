@@ -1,6 +1,6 @@
 id: navigating_the_unknown
 title: Navigating the Unknown
-description: "One day you receive from a confused user who explain that they were trying to access a specific product page, but instead, they saw a blank screen. It's time to investigate the issue and fix it before more users run into it. Your goal is to navigate the unknown and ensure that users never get lost on your website again. Are you ready to take on this challenge and navigate the unknown?"
+description: "One day you receive a report from a confused user who explain that he was trying to access a specific product page, but instead, he saw a blank screen. Your task is to investigate the issue and fix it before more users run into it. Your goal is to navigate the unknown and ensure that users never get lost on your website again. Are you ready to take on this challenge and navigate the unknown?"
 summary: "Navigating the unknown is a journey that requires a keen eye for detail and a thoughtful approach. In this challenge, user needs to investigate the issue that customers are seeing blank screen when they navigate to /product route. After debugging they need to find issue is in the routing configuration and they need to add 404 page to solve the issue."
 level: beginner
 steps:
