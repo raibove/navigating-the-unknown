@@ -66,6 +66,4 @@ githubActions:
   frontend:
     capabilities:
     - enzyme
-    testfile: "route.test.js"
-
-
+    testFile: "route.test.js"
