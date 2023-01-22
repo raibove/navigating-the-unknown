@@ -12,7 +12,7 @@ startFlow:
       messages:
       - text: "Great work in identifying the issue! Now that we know it's a missing page, we need to create a 404 page to handle any broken links or missing pages in the future."
         delay: 1300
-      - text: "In the 404 page you can add the text as _Oops, Looks like you've stumbled upon a item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!_ "
+      - text: "In the 404 page you can add the text as `Oops, Looks like you've stumbled upon a item that currently does not exist. But don't worry, there are plenty of other cool items to choose from in the Anythink marketplace. Take a look around and find something new!` "
         delay: 1400
       - text: "Once you create this component, add it to the routing and create a PR."
         delay: 3500
