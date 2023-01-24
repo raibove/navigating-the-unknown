@@ -16,7 +16,7 @@ startFlow:
         delay: 3500
       - text: "It is really important that we figure out what's causing this issue so we can fix it as soon as possible."
         delay: 1500
-      - text: "Can you please take a look and see if you can find the root cause of the issue? Check the console, or if there are any error messages in the code or other possibilities."
+      - text: "I'm counting on you to help us out by digging into the code and identifying the root cause of the problem."
         delay: 2500
       - text: "Let me know what the issue is once you've identified it so that we can work on a solution."
         delay: 2000
@@ -30,7 +30,7 @@ trigger:
       - conditionId: text_match_regex
         params:
           text: "${userMessageText}"
-          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue
+          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue|no route|page does not exist|route missing
           flags: i
       then:
         do:
