@@ -1,0 +1,22 @@
+id: rescue_route
+learningObjectives: 
+- Add link to navigate to homepage when users enconter a broken link or missing page.
+hints:
+- Use Link component provided by react-router-dom
+- Make sure you are naming the button/link as Return Home
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: lucca
+      messages:
+      - text: "Now that you've successfully created a 404 page to catch any brokken links or missing pages, it's time to add a little extra touch to it."
+        delay: 2000
+      - text: "I was thinking that we could add a link to the home page on the 404 page, so that users can easily navigate back to the homepage."
+        delay: 3500
+      - text: ":instruction[Name the button as "Return Home"]"
+        delay: 1500
+      - text: "Create a PR once you have made the changes. This way, users can easily travel back home even if they get lost again."
+        delay: 2500
+      - text: "Let me know if you need any help or have any questions."
+        delay: 2000
