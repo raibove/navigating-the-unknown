@@ -13,3 +13,9 @@ skills:
 - debugging
 questDependency: docker_localsetup
 slogan: Lost no more
+messages:
+  questFinished:
+    person: lucca
+    messages:
+      - text: "You did it! Congrats on a job well done! Now go out there and explore some more of the great unknown, but don't forget your trusty compass and map. Happy questing!"
+        delay: 1500
