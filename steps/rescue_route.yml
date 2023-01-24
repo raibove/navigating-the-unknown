@@ -61,7 +61,7 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: lucca
-              message: "Unfortunately, it looks like the changes you made to the 404 page did not fulfill the requirements. Make sure to double check that you have added a link to the home page and named button as `Return Home`."
+              message: "Unfortunately, it looks like the changes you made to the 404 page did not fulfill the requirements. Make sure to double check that you have added a link to the home page and named button as 'Return Home'."
         github_pr_merged:
           do:
           - actionId: finish_step
@@ -70,4 +70,4 @@ githubActions:
   frontend:
     capabilities:
     - enzyme
-    testFile: "route.test.js"
+    testFile: "rescue_route.test.js"
