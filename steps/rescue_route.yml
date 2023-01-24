@@ -20,3 +20,54 @@ startFlow:
         delay: 2500
       - text: "Let me know if you need any help or have any questions."
         delay: 2000
+trigger: 
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "On it, I'll review the changes right away."
+                delay: 1000
+          - actionId: github_pr_comment
+            params:
+              person: lucca
+              message: "On it, I'll review the changes right away."
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "Great job, you can merge the PR! You have successfully added a homecoming beacon to the 404 page. Keep up the great navigation skills."
+                delay: 2000
+          - actionId: github_pr_approve
+            params:
+              person: lucca
+              message: "Great job, you can merge the PR! You have successfully added a homecoming beacon to the 404 page. Keep up the great navigation skills."
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "Unfortunately, it looks like the changes you made to the 404 page did not fulfill the requirements. Make sure to double check that you have added a link to the home page and named button as `Return Home`."
+                delay: 3000
+          - actionId: github_pr_reject
+            params:
+              person: lucca
+              message: "Unfortunately, it looks like the changes you made to the 404 page did not fulfill the requirements. Make sure to double check that you have added a link to the home page and named button as `Return Home`."
+        github_pr_merged:
+          do:
+          - actionId: finish_step
+githubActions:
+  backend:
+  frontend:
+    capabilities:
+    - enzyme
+    testFile: "route.test.js"

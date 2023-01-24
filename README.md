@@ -15,6 +15,7 @@ Navigating the unknown is a journey that requires a keen eye for detail and a th
 Describe each step in the quest. 
 - Step 1 uncover_the_mystery: Identifying the root cause of the issue.
 - Step 2 create_a_safety_net: Implementing a 404 page to catch any broken links or missing pages.
+- Step 3 rescue_route: Add a link to home page
 
 
 ## Textbook solution
@@ -35,4 +36,13 @@ Before submitting your quest for review, test your quest in snack and check the 
 - Instructions: Create a component that has the content of 404 page and update the routing configuration so that user will be shown appropriate message if they land on a page that does not exist.
 - How do users pass to the next step: By creating a new component for 404 Page and updating routing to show the 404 Page for broken links or missing pages.
 - Hints: Use react-router-dom's Switch component to handle 404 page.
-...
+
+
+#### Step 3 [rescue_route]:
+- Learning Objective: Add link to navigate to homepage when users enconter a broken link or missing page.
+Narrative: With the 404 page you created, users know that the page they are trying to does not exist. To make it easy for them to navigate to other pages we will add a link to home page.
+Instructions: Update the 404 page and make use of the Link component provided by react-router-dom to help user navigate to home page if they land on 404 page. Make sure you are naming the navigation element as "Return Home".
+- How do users pass to the next step: By adding a link to "Return home", so that navigation from 404 page to homepage will be easier.
+Hints:
+- Use Link component provided by react-router-dom
+- Make sure you are naming the button/link as Return Home
