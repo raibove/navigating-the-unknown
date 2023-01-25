@@ -70,5 +70,6 @@ githubActions:
   backend:
   frontend:
     capabilities:
-    - enzyme
+    - \@testing-library/react@12.1.5
+    - \@testing-library/jest-dom
     testFile: "rescue_route.test.js"
