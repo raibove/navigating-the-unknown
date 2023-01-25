@@ -14,7 +14,7 @@ startFlow:
         delay: 2000
       - text: "I was thinking that we could add a link to the home page on the 404 page, so that users can easily navigate back to the homepage."
         delay: 3500
-      - text: ":instruction[Name the button as "Return Home"]"
+      - text: :instruction[Name the button as "Return Home"]
         delay: 1500
       - text: "Create a PR once you have made the changes. This way, users can easily travel back home even if they get lost again."
         delay: 2500
