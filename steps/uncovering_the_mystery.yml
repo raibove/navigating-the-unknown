@@ -30,7 +30,7 @@ trigger:
       - conditionId: text_match_regex
         params:
           text: "${userMessageText}"
-          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue|no route|page does not exist|route missing
+          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue|no route|page does not exist|route missing|not exist
           flags: i
       then:
         do:
