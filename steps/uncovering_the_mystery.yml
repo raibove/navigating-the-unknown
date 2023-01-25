@@ -11,11 +11,11 @@ startFlow:
       person: lucca
       messages:
       - text: "Hey there! My name is Lucca and I work with Vanessa and Navi at Anythink. I'm really excited to be working with you on this project."
-        delay: 2000
-      - text: "Well, we've been getting a lot of complaints from our customers that they're landing on a blank page when they try to access the **/product** route. We're not sure how they landed on that page. They may have followed a link from an external website or a search engine, but when they arrive at the page, there is no content displayed."
         delay: 3500
+      - text: "Well, we've been getting a lot of complaints from our customers that they're landing on a blank page when they try to access the **/product** route. We're not sure how they landed on that page. They may have followed a link from an external website or a search engine, but when they arrive at the page, there is no content displayed."
+        delay: 4000
       - text: "It is really important that we figure out what's causing this issue so we can fix it as soon as possible."
-        delay: 1500
+        delay: 3500
       - text: "I'm counting on you to help us out by digging into the code and identifying the root cause of the problem."
         delay: 2500
       - text: "Let me know what the issue is once you've identified it so that we can work on a solution."

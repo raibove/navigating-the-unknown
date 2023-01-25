@@ -1,12 +1,14 @@
-import { mount } from 'enzyme';
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom'
 import { MemoryRouter } from 'react-router-dom';
 import {store} from "./store";
 import { Provider } from "react-redux";
 import App from "./components/App";
 
 describe('404 Page', () => {
-    test('home link redirects to home page', () => {
-      const wrapper = mount(
+    test('Return Home text exist on 404 page', ()=>{
+      const {getByText} = render(
         <Provider store={store}>
         <MemoryRouter initialEntries={['/product']}>
           <App />
@@ -14,12 +16,23 @@ describe('404 Page', () => {
         </Provider>
       );
 
-      const homeLink = wrapper.text().includes('Return Home')
-      expect(homeLink.exists()).toBe(true);
-      homeLink.simulate('click', { button: 0 });
+      const homeLink = getByText(/return home/i);
+      expect(homeLink).toBeInTheDocument()
+    })
 
-      expect(wrapper.find(App)).toHaveLength(1);
+    test('home link redirects to home page', () => {
+      const {getByText} = render(
+        <Provider store={store}>
+        <MemoryRouter initialEntries={['/product']}>
+          <App />
+        </MemoryRouter>
+        </Provider>
+      );
 
+      const homeLink = getByText(/return home/i);
+      
+      fireEvent.click(homeLink);
+      expect(window.location.pathname).toEqual('/');
     });
   });
   
