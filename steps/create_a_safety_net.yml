@@ -3,7 +3,8 @@ learningObjectives:
 - Implementing a 404 page to catch any broken links or missing pages.
 hints:
 - Create a new component that let users know that the page they are trying to visit does not exist.
-- Use react-router-dom to handle the 404 page.
+- Diy you add text as `Page Not Found` in the component?
+- Use react-router-dom to handle the 404 page.  [documentation](https://v5.reactrouter.com/web/example/no-match)
 startFlow:
   do:
   - actionId: bot_message

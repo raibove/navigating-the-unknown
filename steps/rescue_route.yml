@@ -2,8 +2,8 @@ id: rescue_route
 learningObjectives: 
 - Add link to navigate to homepage when users enconter a broken link or missing page.
 hints:
-- Use Link component provided by react-router-dom
-- Make sure you are naming the button as Return Home.
+- Did you use Link component provided by react-router-dom?
+- Are you sure you are naming the Link as `Return Home`?
 - Add link to '/' route to redirect user to home page.
 startFlow:
   do:
