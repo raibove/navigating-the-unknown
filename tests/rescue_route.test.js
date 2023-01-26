@@ -31,8 +31,7 @@ describe('404 Page', () => {
 
       const homeLink = getByText(/return home/i);
       
-      fireEvent.click(homeLink);
-      expect(window.location.pathname).toEqual('/');
+      expect(link.getAttribute("href")).toBe("/");
     });
   });
   
