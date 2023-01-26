@@ -2,7 +2,8 @@ id: uncovering_the_mystery
 learningObjectives: 
 - Identifying the root cause of the issue. This will involve debugging the code and conducting thorough research to pinpoint the exact location of the problem.
 hints:
-- Check if there is any error in the console or if the app is running properly. 
+- Check the code in the frontend folder.
+- Take a look in the App.js file 
 - Find if routing is properly configured for that page.
 startFlow:
   do:
@@ -30,7 +31,7 @@ trigger:
       - conditionId: text_match_regex
         params:
           text: "${userMessageText}"
-          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue|no route|page does not exist|route missing|not exist
+          regex: routing configuration|missing page|404|page not found|route configuration|broken link|routing issue|no route|page does not exist|route missing|not exist|not found
           flags: i
       then:
         do:
@@ -49,5 +50,5 @@ trigger:
             messages:
             - text: It seems like you're still not quite sure what the issue is. We understand that debugging can be challenging, but don't worry, we're here to help.
               delay: 1000
-            - text:  Can you please take another look and let us know if you need any assistance?
+            - text:  Can you please take a look in the frontend code and let us know if you need any assistance?
               delay: 1000

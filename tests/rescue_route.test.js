@@ -31,7 +31,7 @@ describe('404 Page', () => {
 
       const homeLink = getByText(/return home/i);
       
-      expect(link.getAttribute("href")).toBe("/");
+      expect(homeLink.getAttribute("href")).toBe("/");
     });
   });
   
